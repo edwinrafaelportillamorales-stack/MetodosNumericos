@@ -10,11 +10,11 @@ public class Gauss {
             for (int j = i + 1; j < n; j++){
 
                 // Calcula el factor de proporción para anular el coeficiente de esta columna
-                double factor = matriz[j][j] / matriz[j][j];
+                double factor = matriz[j][i] / matriz[i][i];
                 //CICLO 3 (K): Recorre COLUMNA POR COLUMNA la fila completa
                 // para aplicar a operación matemática: R_j = R_j - (factor * R_i )
-                for (int k = i; k <= n; k++){
-                matriz[j][k] -= factor * matriz[j][k];
+                for (int k = i; k <= n; k++) {
+                matriz[j][k] -= factor * matriz[i][k];
                 }
             }
         }
